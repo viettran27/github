@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #3ca7ee, #9b408f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+.register {
+  width: 400px;
+  padding: 35px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  cursor: default;
+}
+.register h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.register__form {
+  position: relative;
+  margin: 30px 0;
+}
+.register__form-input {
+  border: none;
+  outline: none;
+  margin: 3px 0;
+  background-color: transparent;
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  padding-right: 20px;
+}
+.register__form-input::placeholder {
+  font-style: inherit;
+}
+.register__form-input:focus + .register__form-line {
+  z-index: 1;
+  width: 100%;
+}
+.register__form i {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  cursor: pointer;
+}
+.register__form::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid #ADADAD;
+}
+.register__form-line {
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  border-bottom: 2px solid #2691D9;
+  transition: 0.5s;
+}
+.register__form .notice {
+  position: absolute;
+  bottom: -24px;
+  font-size: 12px;
+  color: #E74C3C;
+}
+.register__footer {
+  padding-top: 10px;
+}
+.register__footer button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: #2691D9;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.register__footer button:hover {
+  background-color: #08609a;
+}
+.register__footer-signup {
+  margin-top: 20px;
+}
+.register__footer-signup p {
+  color: #666666;
+}
+.register__footer-signup a {
+  text-decoration: none;
+  color: #2691D9;
+}
+
+.error::before {
+  border-bottom: 2px solid #E74C3C;
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */

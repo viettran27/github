@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #3ca7ee, #9b408f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+}
+.register {
+    width: 400px;
+    padding: 35px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    cursor: default;
+    & h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    &__form {
+        position: relative;
+        margin: 30px 0;
+        &-input {
+            border: none;
+            outline: none;
+            margin: 3px 0;
+            background-color: transparent;
+            height: 40px;
+            width: 100%;
+            font-size: 18px;
+            padding-right: 20px;
+
+            &::placeholder {
+                font-style: inherit;
+            }
+
+            &:focus + .register__form-line {
+                z-index: 1;
+                width: 100%;
+            }
+        }
+        & i {
+            position: absolute;
+            right: 0;
+            top: 30%;
+            cursor: pointer;
+        }
+        &::before {
+            content: "";
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            border-bottom: 2px solid #ADADAD;
+        }
+        &-line {
+            width: 0;
+            position: absolute;
+            bottom: 0;
+            z-index: 0;
+            border-bottom: 2px solid #2691D9;
+            transition: 0.5s;
+        }
+        & .notice {
+            position: absolute;
+            bottom: -24px;
+            font-size: 12px;
+            color: #E74C3C;
+        }
+    }
+    &__footer {
+        padding-top: 10px;
+        & button {
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: #2691D9;
+            border-radius: 20px;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                background-color: #08609a;
+            }
+        }
+        &-signup {
+            margin-top: 20px;
+            & p {
+                color: #666666;
+            }
+            & a {
+                text-decoration: none;
+                color: #2691D9;
+            }
+        }
+    }
+}
+
+.error::before {
+    border-bottom: 2px solid #E74C3C;
+}
+.hide {
+    display: none;
+}

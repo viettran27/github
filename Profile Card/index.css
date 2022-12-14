@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(90deg, #3ab338 0%, #1f9f13 100%);
+  font-size: 62.5%;
+}
+
+.card {
+  width: 320px;
+  height: 400px;
+  background-color: #242628;
+  border-radius: 15px;
+  margin: 100px auto;
+  color: white;
+  font-family: "Poppins";
+  text-align: center;
+  overflow: hidden;
+}
+.card__image {
+  width: 40%;
+  border: 4px solid #F2726A;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translateY(20px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card__image:hover {
+  border-radius: unset;
+  border: unset;
+  transform: unset;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.card__image img {
+  width: 100%;
+  height: 100%;
+}
+.card__name {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.card__detail {
+  font-size: 1rem;
+  color: #F2726A;
+}
+.card__name, .card__detail {
+  cursor: default;
+}
+.card__link {
+  margin: 30px 0;
+}
+.card__link a {
+  text-decoration: none;
+  color: white;
+}
+.card__link a i {
+  font-size: 1.5rem;
+  margin: 0 15px;
+}
+.card__link a i:hover {
+  color: #F2726A;
+}
+.card__contact button {
+  width: 122px;
+  height: 42px;
+  color: white;
+  background: transparent;
+  border: 1px solid #F2726A;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.card__contact button:hover {
+  background: #F2726A;
+}
+
+/*# sourceMappingURL=index.css.map */

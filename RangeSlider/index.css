@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  transform: translateY(-50px);
+  font-size: 35px;
+}
+
+.container {
+  width: 600px;
+  height: 52px;
+  border: 1px solid #AAAA;
+  border-radius: 25px;
+  background-color: white;
+  overflow: hidden;
+  cursor: e-resize;
+}
+.container .slider {
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(to right, #bb69cc, #246bac);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=index.css.map */

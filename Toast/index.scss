@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$greenColor: #008000;
+$yellowColor: #FFA500;
+$redColor: #FF0000;
+
+body {
+    background: #ECF0F1;
+    min-height: 100vh;
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & button {
+        padding: 15px 25px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 2px;
+        color: white;
+        cursor: pointer;
+    }
+    &__success {
+        background-color: $greenColor;
+    }
+    &__warning {
+        background-color: $yellowColor;
+    }
+    &__error {
+        background-color: $redColor;
+    }
+}
+
+.toast {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    &__notification {
+        margin: 20px 0;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        color: #FEF4F5;
+        position: relative;
+        overflow: hidden;
+        animation: showToast 1s ease forwards;
+        & i {
+            margin-right: 10px;
+            font-size: 30px;
+        }
+        & p {
+            font-size: 20px;
+        }
+        &-line {
+            position: absolute;
+            height: 4px;
+            bottom: 0;
+            left: 0;
+            animation: lineRun 4s linear forwards;
+        }
+    }
+}
+
+#toast {
+    &__success {
+        background-color: #8EC391 ;
+        border-left: 5px solid $greenColor;
+        
+        & span {
+            background-color: $greenColor;
+        }
+    }
+    &__warning {
+        background-color: #F4D291;
+        border-left: 5px solid $yellowColor;
+                
+        & span {
+            background-color: $yellowColor;
+        }
+    }
+    &__error {
+        background-color: #F49091;
+        border-left: 5px solid $redColor;
+                
+        & span {
+            background-color: $redColor;
+        }
+    }
+}
+
+@keyframes lineRun {
+    20% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes showToast {
+	0% {
+		transform: translateX(100%);
+	}
+	40% {
+		transform: translateX(-10%);
+	}
+	80% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-10px);
+	}
+}
+
+@keyframes hideToast {
+	0% {
+		transform: translateX(-10px);
+	}
+	40% {
+		transform: translateX(0%);
+	}
+	80% {
+		transform: translateX(-10%);
+	}
+	100% {
+		transform: translateX(120%);
+	}
+}
